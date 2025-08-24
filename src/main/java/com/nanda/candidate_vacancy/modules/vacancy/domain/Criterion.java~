@@ -1,0 +1,7 @@
+package com.nanda.candidate_vacancy.modules.vacancy.domain;
+
+public enum Criterion {
+    AGE,
+    GENDER,
+    SALARY_RANGE
+}
