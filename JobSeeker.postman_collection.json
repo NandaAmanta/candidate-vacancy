@@ -1,0 +1,1373 @@
+{
+	"info": {
+		"_postman_id": "948095fc-2354-4c90-8471-62ceeb365a75",
+		"name": "JobSeeker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7367263"
+	},
+	"item": [
+		{
+			"name": "Candidate",
+			"item": [
+				{
+					"name": "pagination",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "ab2f9eb9-bdd3-4934-8552-4bb4fbdd1b32",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/candidates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"candidates"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/candidates",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"candidates"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Aug 2025 00:31:38 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"content\": [\n            {\n                \"id\": \"8048cd64-f327-425f-9cd2-caf319cc499d\",\n                \"name\": \"Ni Wayan Astari\",\n                \"email\": \"astari@example.com\",\n                \"birth_date\": \"1999-05-14\",\n                \"gender\": \"FEMALE\",\n                \"current_salary\": 5500000\n            },\n            {\n                \"id\": \"f264f5af-9dc8-4516-bb8f-bd8a273ea7a8\",\n                \"name\": \"Nanda Amanta\",\n                \"email\": \"nansamgr@example.com\",\n                \"birth_date\": \"1999-05-14\",\n                \"gender\": \"MALE\",\n                \"current_salary\": 5500000\n            }\n        ],\n        \"pageable\": {\n            \"pageNumber\": 0,\n            \"pageSize\": 10,\n            \"sort\": {\n                \"empty\": true,\n                \"unsorted\": true,\n                \"sorted\": false\n            },\n            \"offset\": 0,\n            \"unpaged\": false,\n            \"paged\": true\n        },\n        \"totalElements\": 2,\n        \"totalPages\": 1,\n        \"last\": true,\n        \"size\": 10,\n        \"number\": 0,\n        \"sort\": {\n            \"empty\": true,\n            \"unsorted\": true,\n            \"sorted\": false\n        },\n        \"numberOfElements\": 2,\n        \"first\": true,\n        \"empty\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "ab2f9eb9-bdd3-4934-8552-4bb4fbdd1b32",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nanda Amanta\",\r\n    \"email\": \"nanamgr@example.com\",\r\n    \"birth_date\": \"1999-05-14\",\r\n    \"gender\": \"MALE\",\r\n    \"current_salary\": 5500000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/candidates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"candidates"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Nanda Amanta\",\r\n    \"email\": \"nanamgr@example.com\",\r\n    \"birth_date\": \"1999-05-14\",\r\n    \"gender\": \"MALE\",\r\n    \"current_salary\": 5500000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/candidates",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"candidates"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Aug 2025 00:32:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": \"4ad9bcaa-43d9-461d-8208-a006ee2d9add\",\n        \"name\": \"Nanda Amanta\",\n        \"email\": \"nanamgr@example.com\",\n        \"birth_date\": \"1999-05-14\",\n        \"gender\": \"MALE\",\n        \"current_salary\": 5500000\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "ab2f9eb9-bdd3-4934-8552-4bb4fbdd1b32",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"I Putu Nanda Amanta\",\r\n    \"email\": \"nanda.amanta@example.com\",\r\n    \"birth_date\": \"1999-05-14\",\r\n    \"gender\": \"MALE\",\r\n    \"current_salary\": 5500000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/candidates/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"candidates",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8048cd64-f327-425f-9cd2-caf319cc499d"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"I Putu Nanda Amanta\",\r\n    \"email\": \"nanda.amanta@example.com\",\r\n    \"birth_date\": \"1999-05-14\",\r\n    \"gender\": \"MALE\",\r\n    \"current_salary\": 5500000\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/candidates/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"candidates",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "8048cd64-f327-425f-9cd2-caf319cc499d"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Aug 2025 00:33:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": \"8048cd64-f327-425f-9cd2-caf319cc499d\",\n        \"name\": \"Ni Wayan Astari\",\n        \"email\": \"astari@example.com\",\n        \"birth_date\": \"1999-05-14\",\n        \"gender\": \"FEMALE\",\n        \"current_salary\": 5500000\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "ab2f9eb9-bdd3-4934-8552-4bb4fbdd1b32",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Astari\",\r\n    \"email\": \"astari@example.com\",\r\n    \"birth_date\": \"1999-05-14\",\r\n    \"gender\": \"FEMALE\",\r\n    \"current_salary\": 5500000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/candidates/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"candidates",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8048cd64-f327-425f-9cd2-caf319cc499d"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Astari\",\r\n    \"email\": \"astari@example.com\",\r\n    \"birth_date\": \"1999-05-14\",\r\n    \"gender\": \"FEMALE\",\r\n    \"current_salary\": 5500000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/candidates/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"candidates",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "8048cd64-f327-425f-9cd2-caf319cc499d"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Aug 2025 00:34:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": \"8048cd64-f327-425f-9cd2-caf319cc499d\",\n        \"name\": \"Astari\",\n        \"email\": \"astari@example.com\",\n        \"birth_date\": \"1999-05-14\",\n        \"gender\": \"FEMALE\",\n        \"current_salary\": 5500000\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "ab2f9eb9-bdd3-4934-8552-4bb4fbdd1b32",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"I Putu Nanda Amanta\",\r\n    \"email\": \"nanda.amanta@example.com\",\r\n    \"birth_date\": \"1999-05-14\",\r\n    \"gender\": \"MALE\",\r\n    \"current_salary\": 5500000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/candidates/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"candidates",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4ad9bcaa-43d9-461d-8208-a006ee2d9add"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"I Putu Nanda Amanta\",\r\n    \"email\": \"nanda.amanta@example.com\",\r\n    \"birth_date\": \"1999-05-14\",\r\n    \"gender\": \"MALE\",\r\n    \"current_salary\": 5500000\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/candidates/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"candidates",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4ad9bcaa-43d9-461d-8208-a006ee2d9add"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Aug 2025 00:35:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "RankByVacancy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/candidate-ranks?vacancy_id=b4adcd75-e63f-4fe5-88d6-c4a03ee70f8a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"candidate-ranks"
+							],
+							"query": [
+								{
+									"key": "vacancy_id",
+									"value": "b4adcd75-e63f-4fe5-88d6-c4a03ee70f8a"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/candidate-ranks?vacancy_id=b4adcd75-e63f-4fe5-88d6-c4a03ee70f8a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"candidate-ranks"
+									],
+									"query": [
+										{
+											"key": "vacancy_id",
+											"value": "b4adcd75-e63f-4fe5-88d6-c4a03ee70f8a"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Aug 2025 00:46:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"id\": \"f264f5af-9dc8-4516-bb8f-bd8a273ea7a8\",\n            \"name\": \"Nanda Amanta\",\n            \"email\": \"nansamgr@example.com\",\n            \"score\": 5\n        },\n        {\n            \"id\": \"8048cd64-f327-425f-9cd2-caf319cc499d\",\n            \"name\": \"Astari\",\n            \"email\": \"astari@example.com\",\n            \"score\": 3\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Vacancy",
+			"item": [
+				{
+					"name": "Pagination",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "ab2f9eb9-bdd3-4934-8552-4bb4fbdd1b32",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"I Putu Nanda Amanta\",\r\n    \"email\": \"nanda.amanta@example.com\",\r\n    \"birth_date\": \"1999-05-14\",\r\n    \"gender\": \"MALE\",\r\n    \"current_salary\": 5500000\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vacancies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vacancies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"I Putu Nanda Amanta\",\r\n    \"email\": \"nanda.amanta@example.com\",\r\n    \"birth_date\": \"1999-05-14\",\r\n    \"gender\": \"MALE\",\r\n    \"current_salary\": 5500000\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/vacancies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"vacancies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Aug 2025 00:35:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"content\": [\n            {\n                \"id\": \"b4adcd75-e63f-4fe5-88d6-c4a03ee70f8a\",\n                \"name\": \"Mid Data Scince\",\n                \"description\": \"TestDesc\",\n                \"criterions\": [\n                    {\n                        \"type\": \"GENDER\",\n                        \"details\": {\n                            \"gender\": \"MALE\"\n                        },\n                        \"weight\": 2\n                    },\n                    {\n                        \"type\": \"SALARY_RANGE\",\n                        \"details\": {\n                            \"min_salary\": 5000000,\n                            \"max_salary\": 10000000\n                        },\n                        \"weight\": 3\n                    }\n                ]\n            },\n            {\n                \"id\": \"3f0faec0-f76a-4e77-a201-337edc20577d\",\n                \"name\": \"Senior Web Dev\",\n                \"description\": \"Test\",\n                \"criterions\": [\n                    {\n                        \"type\": \"AGE\",\n                        \"details\": {\n                            \"min_age\": 20,\n                            \"max_age\": 50\n                        },\n                        \"weight\": 5\n                    }\n                ]\n            }\n        ],\n        \"pageable\": {\n            \"pageNumber\": 0,\n            \"pageSize\": 10,\n            \"sort\": {\n                \"empty\": true,\n                \"unsorted\": true,\n                \"sorted\": false\n            },\n            \"offset\": 0,\n            \"unpaged\": false,\n            \"paged\": true\n        },\n        \"totalElements\": 2,\n        \"totalPages\": 1,\n        \"last\": true,\n        \"size\": 10,\n        \"number\": 0,\n        \"sort\": {\n            \"empty\": true,\n            \"unsorted\": true,\n            \"sorted\": false\n        },\n        \"numberOfElements\": 2,\n        \"first\": true,\n        \"empty\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "ab2f9eb9-bdd3-4934-8552-4bb4fbdd1b32",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Junior Web Dev\",\r\n    \"description\" : \"Test\",\r\n    \"criterions\" : [\r\n        {\r\n            \"type\" : \"AGE\",\r\n            \"details\" : {\r\n                \"min_age\" : 17,\r\n                \"max_age\" : 20\r\n            },\r\n            \"weight\" : 5\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vacancies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vacancies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Junior Web Dev\",\r\n    \"description\" : \"Test\",\r\n    \"criterions\" : [\r\n        {\r\n            \"type\" : \"AGE\",\r\n            \"details\" : {\r\n                \"min_age\" : 17,\r\n                \"max_age\" : 20\r\n            },\r\n            \"weight\" : 5\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/vacancies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"vacancies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Aug 2025 00:37:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": \"3890e1dc-efa3-4faa-84f0-67b4e5704a2b\",\n        \"name\": \"Junior Web Dev\",\n        \"description\": \"Test\",\n        \"criterions\": [\n            {\n                \"type\": \"AGE\",\n                \"details\": {\n                    \"min_age\": 17,\n                    \"max_age\": 20\n                },\n                \"weight\": 5\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "ab2f9eb9-bdd3-4934-8552-4bb4fbdd1b32",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Mid Data Scince\",\r\n    \"description\" : \"TestDesc\",\r\n    \"criterions\" : [\r\n        {\r\n            \"type\" : \"AGE\",\r\n            \"details\" : {\r\n                \"min_age\" : 20,\r\n                \"max_age\" : 50\r\n            },\r\n            \"weight\" : 5\r\n        },\r\n        {\r\n                \"type\": \"GENDER\",\r\n                \"details\": {\r\n                    \"gender\" : \"MALE\"\r\n                },\r\n                \"weight\": 2\r\n            },\r\n        {\r\n                \"type\": \"SALARY_RANGE\",\r\n                \"details\": {\r\n                    \"min_salary\" : 5000000,\r\n                    \"max_salary\" : 10000000\r\n                },\r\n                \"weight\": 3\r\n            }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vacancies/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vacancies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3890e1dc-efa3-4faa-84f0-67b4e5704a2b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Mid Data Scince\",\r\n    \"description\" : \"TestDesc\",\r\n    \"criterions\" : [\r\n        {\r\n            \"type\" : \"AGE\",\r\n            \"details\" : {\r\n                \"min_age\" : 20,\r\n                \"max_age\" : 50\r\n            },\r\n            \"weight\" : 5\r\n        },\r\n        {\r\n                \"type\": \"GENDER\",\r\n                \"details\": {\r\n                    \"gender\" : \"MALE\"\r\n                },\r\n                \"weight\": 2\r\n            },\r\n        {\r\n                \"type\": \"SALARY_RANGE\",\r\n                \"details\": {\r\n                    \"min_salary\" : 5000000,\r\n                    \"max_salary\" : 10000000\r\n                },\r\n                \"weight\": 3\r\n            }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/vacancies/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"vacancies",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3890e1dc-efa3-4faa-84f0-67b4e5704a2b"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Aug 2025 00:38:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": \"3890e1dc-efa3-4faa-84f0-67b4e5704a2b\",\n        \"name\": \"Mid Data Scince\",\n        \"description\": \"TestDesc\",\n        \"criterions\": [\n            {\n                \"type\": \"AGE\",\n                \"details\": {\n                    \"min_age\": 20,\n                    \"max_age\": 50\n                },\n                \"weight\": 5\n            },\n            {\n                \"type\": \"GENDER\",\n                \"details\": {\n                    \"gender\": \"MALE\"\n                },\n                \"weight\": 2\n            },\n            {\n                \"type\": \"SALARY_RANGE\",\n                \"details\": {\n                    \"min_salary\": 5000000,\n                    \"max_salary\": 10000000\n                },\n                \"weight\": 3\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vacancies/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vacancies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "b4adcd75-e63f-4fe5-88d6-c4a03ee70f8a"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/vacancies/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"vacancies",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "b4adcd75-e63f-4fe5-88d6-c4a03ee70f8a"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Aug 2025 00:39:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": \"b4adcd75-e63f-4fe5-88d6-c4a03ee70f8a\",\n        \"name\": \"Mid Data Scince\",\n        \"description\": \"TestDesc\",\n        \"criterions\": [\n            {\n                \"type\": \"GENDER\",\n                \"details\": {\n                    \"gender\": \"MALE\"\n                },\n                \"weight\": 2\n            },\n            {\n                \"type\": \"SALARY_RANGE\",\n                \"details\": {\n                    \"min_salary\": 5000000,\n                    \"max_salary\": 10000000\n                },\n                \"weight\": 3\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/vacancies/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"vacancies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3890e1dc-efa3-4faa-84f0-67b4e5704a2b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/vacancies/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"vacancies",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3890e1dc-efa3-4faa-84f0-67b4e5704a2b"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Aug 2025 00:40:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": true\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
